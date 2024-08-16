@@ -10,7 +10,7 @@ class VegetableModel(nn.Module):
         self.base_model = timm.create_model("efficientnet_b0", pretrained=True)
         self.features = nn.Sequential(*list(self.base_model.children())[:-1])
 
-        network_out_size = 1280  # EfficientNet B0 last layer dimention
+        network_out_size = 1280  # EfficientNet B0 last layer dimension
 
        
         self.classifier = nn.Sequential(
